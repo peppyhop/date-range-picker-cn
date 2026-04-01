@@ -12,6 +12,28 @@ Date range picker components for shadcn-based React applications with both Base 
 
 You can install the component via the shadcn CLI or as a standard npm package.
 
+## Publishing to npm (OIDC)
+
+npm supports trusted publishing from GitHub Actions using OpenID Connect (OIDC), so you can publish without storing long-lived npm tokens in GitHub secrets.
+
+Prerequisites:
+
+- npm CLI 11.5.1+ in CI (this repo’s workflow installs the latest npm)
+- GitHub-hosted runners (OIDC trusted publishing does not work on self-hosted runners)
+
+Setup:
+
+1. Publish once from your machine (OTP/token) so the package exists on npm.
+2. On npmjs.com → your package → Settings → Trusted Publisher, add GitHub Actions publisher:
+   - Owner: `peppyhop`
+   - Repository: `date-range-picker-cn`
+   - Workflow filename: `publish.yml`
+3. Push a tag like `v0.0.3` to trigger the publish workflow.
+
+Workflow:
+
+- [publish.yml](file:///Users/shubhamsinha/Projects/npm-packages/date-range-picker-shadcn/.github/workflows/publish.yml)
+
 ### Using AI Agents
 
 This library provides skills for AI coding agents via [TanStack Intent](https://tanstack.com/intent). If you use an AI agent (like Cursor, Copilot, or Claude), run the following command to install the agent skills:
