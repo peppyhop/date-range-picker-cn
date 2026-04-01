@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
 	plugins: [react(), tailwindcss()],
-	base: "/date-range-picker-shadcn/",
+	base: "/date-range-picker-cn/",
 	build: {
 		outDir: "dist",
 		emptyOutDir: true,

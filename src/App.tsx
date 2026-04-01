@@ -329,7 +329,7 @@ function App() {
 													Tailwind v4 (CSS)
 												</p>
 												<pre className="overflow-x-auto rounded-xl bg-muted/60 p-4 text-sm text-foreground">
-													{`@source "../node_modules/date-range-picker-shadcn/dist/**/*.{js,mjs,cjs}";`}
+													{`@source "../node_modules/date-range-picker-cn/dist/**/*.{js,mjs,cjs}";`}
 												</pre>
 											</div>
 										</div>
@@ -360,7 +360,7 @@ function App() {
 								<h2 className="text-2xl font-semibold tracking-tight">Usage</h2>
 								<div className="mt-4 rounded-2xl border border-border/70 bg-background/90 p-5">
 									<pre className="overflow-x-auto rounded-xl bg-muted/60 p-4 text-sm text-foreground">
-										{`import { DateRangePicker } from "date-range-picker-shadcn";
+										{`import { DateRangePicker } from "date-range-picker-cn";
 
 export function Example() {
   return (

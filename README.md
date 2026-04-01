@@ -1,12 +1,12 @@
-# date-range-picker-shadcn
+# date-range-picker-cn
 
 Date range picker components for shadcn-based React applications with both Base UI and Radix UI variants.
 
 ## Packages
 
-- `date-range-picker-shadcn` exports the Base UI variant from the root entry point
-- `date-range-picker-shadcn/base` exposes Base UI components and types directly
-- `date-range-picker-shadcn/radix` exposes Radix UI components and types directly
+- `date-range-picker-cn` exports the Base UI variant from the root entry point
+- `date-range-picker-cn/base` exposes Base UI components and types directly
+- `date-range-picker-cn/radix` exposes Radix UI components and types directly
 
 ## Installation
 
@@ -37,13 +37,13 @@ npx shadcn@latest add https://raw.githubusercontent.com/peppyhop/date-range-pick
 #### Base UI variant (default export)
 
 ```bash
-npm install date-range-picker-shadcn @base-ui/react react-day-picker
+npm install date-range-picker-cn @base-ui/react react-day-picker
 ```
 
 #### Radix UI variant
 
 ```bash
-npm install date-range-picker-shadcn radix-ui react-day-picker
+npm install date-range-picker-cn radix-ui react-day-picker
 ```
 
 ## Web configuration
@@ -58,7 +58,7 @@ This package ships Tailwind class names, so your Tailwind build must scan the pa
 export default {
 	content: [
 		"./src/**/*.{js,ts,jsx,tsx,mdx}",
-		"./node_modules/date-range-picker-shadcn/dist/**/*.{js,mjs,cjs}",
+		"./node_modules/date-range-picker-cn/dist/**/*.{js,mjs,cjs}",
 	],
 };
 ```
@@ -66,7 +66,7 @@ export default {
 - Tailwind v4: ensure your CSS entry includes the package as a source (adjust the relative path if needed)
 
 ```css
-@source "../node_modules/date-range-picker-shadcn/dist/**/*.{js,mjs,cjs}";
+@source "../node_modules/date-range-picker-cn/dist/**/*.{js,mjs,cjs}";
 ```
 
 ### shadcn/ui theme tokens
@@ -80,7 +80,7 @@ Use the picker from a Client Component (a file that starts with `use client`).
 ## Usage
 
 ```tsx
-import { DateRangePicker } from "date-range-picker-shadcn";
+import { DateRangePicker } from "date-range-picker-cn";
 
 export function Example() {
 	return (
@@ -93,7 +93,7 @@ export function Example() {
 ```
 
 ```tsx
-import { DateRangePicker } from "date-range-picker-shadcn/radix";
+import { DateRangePicker } from "date-range-picker-cn/radix";
 
 export function Example() {
 	return <DateRangePicker align="end" showCompare={false} />;

@@ -1,18 +1,18 @@
 ---
-name: date-range-picker-shadcn/usage
+name: date-range-picker-cn/usage
 description: >
   Date range picker components for shadcn-based React applications.
-  Use this skill to correctly install, configure Tailwind CSS, and implement both Base UI and Radix UI variants of date-range-picker-shadcn.
+  Use this skill to correctly install, configure Tailwind CSS, and implement both Base UI and Radix UI variants of date-range-picker-cn.
 type: core
-library: date-range-picker-shadcn
+library: date-range-picker-cn
 library_version: "0.0.1"
 sources:
   - "peppyhop/date-range-picker-cn:README.md"
 ---
 
-# Date Range Picker Shadcn
+# Date Range Picker CN
 
-This skill covers the installation, configuration, and usage of the `date-range-picker-shadcn` library, which provides date range picker components with both Base UI and Radix UI variants.
+This skill covers the installation, configuration, and usage of the `date-range-picker-cn` library, which provides date range picker components with both Base UI and Radix UI variants.
 
 ## Setup
 
@@ -32,10 +32,10 @@ Ensure `react` and `react-dom` (18+) are installed as peer dependencies.
 
 ```bash
 # Base UI variant
-npm install date-range-picker-shadcn @base-ui/react react-day-picker
+npm install date-range-picker-cn @base-ui/react react-day-picker
 
 # Radix UI variant
-npm install date-range-picker-shadcn radix-ui react-day-picker
+npm install date-range-picker-cn radix-ui react-day-picker
 ```
 
 ### Tailwind CSS Configuration
@@ -47,14 +47,14 @@ For Tailwind v3 (`tailwind.config.ts`):
 export default {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/date-range-picker-shadcn/dist/**/*.{js,mjs,cjs}",
+    "./node_modules/date-range-picker-cn/dist/**/*.{js,mjs,cjs}",
   ],
 };
 ```
 
 For Tailwind v4 (in your main CSS file):
 ```css
-@source "../node_modules/date-range-picker-shadcn/dist/**/*.{js,mjs,cjs}";
+@source "../node_modules/date-range-picker-cn/dist/**/*.{js,mjs,cjs}";
 ```
 
 Ensure your app defines standard shadcn/ui color tokens (e.g., `--background`, `--foreground`, `--border`).
@@ -66,7 +66,7 @@ Ensure your app defines standard shadcn/ui color tokens (e.g., `--background`, `
 The default export uses Base UI.
 
 ```tsx
-import { DateRangePicker } from "date-range-picker-shadcn";
+import { DateRangePicker } from "date-range-picker-cn";
 
 export function Example() {
   return (
@@ -85,7 +85,7 @@ export function Example() {
 Import from the `/radix` subpath for the Radix UI variant.
 
 ```tsx
-import { DateRangePicker } from "date-range-picker-shadcn/radix";
+import { DateRangePicker } from "date-range-picker-cn/radix";
 
 export function Example() {
   return (
@@ -115,7 +115,7 @@ Correct:
 export default {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/date-range-picker-shadcn/dist/**/*.{js,mjs,cjs}",
+    "./node_modules/date-range-picker-cn/dist/**/*.{js,mjs,cjs}",
   ],
 };
 ```
@@ -126,27 +126,28 @@ Source: README.md
 
 Wrong:
 ```tsx
-import { DateRangePicker } from "date-range-picker-shadcn";
+import { DateRangePicker } from "date-range-picker-cn";
 // Attempting to use Radix UI without the correct import path
 ```
 
 Correct:
 ```tsx
-import { DateRangePicker } from "date-range-picker-shadcn/radix";
+import { DateRangePicker } from "date-range-picker-cn/radix";
 ```
-The root export exposes the Base UI variant. To use the Radix UI variant, you must import from `date-range-picker-shadcn/radix`.
+The root export exposes the Base UI variant. To use the Radix UI variant, you must import from `date-range-picker-cn/radix`.
 Source: README.md
 
 ### HIGH Missing Peer Dependencies
 
 Wrong:
 ```bash
-npm install date-range-picker-shadcn
+npm install date-range-picker-cn
 ```
 
 Correct:
 ```bash
-npm install date-range-picker-shadcn @base-ui/react react-day-picker
+npm install date-range-picker-cn @base-ui/react react-day-picker
 ```
 The library requires peer dependencies to function correctly. If installing via npm, you must explicitly install the required peer dependencies depending on the variant you choose.
 Source: README.md
+
