@@ -8,4 +8,4 @@
 
 > **RadixDateRangePickerIcon** = `React.ComponentType`\<\{ `className?`: `string`; \}\>
 
-Defined in: [radix/date-range-picker.tsx:9](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/radix/date-range-picker.tsx#L9)
+Defined in: [radix/date-range-picker.tsx:9](https://github.com/peppyhop/date-range-picker-cn/blob/727e3f089b27437167486822e985b97a756d59ad/src/radix/date-range-picker.tsx#L9)

@@ -8,4 +8,4 @@
 
 > **BaseDateInputIcon** = `React.ComponentType`\<\{ `className?`: `string`; \}\>
 
-Defined in: [base/date-input.tsx:3](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-input.tsx#L3)
+Defined in: [base/date-input.tsx:3](https://github.com/peppyhop/date-range-picker-cn/blob/727e3f089b27437167486822e985b97a756d59ad/src/base/date-input.tsx#L3)
