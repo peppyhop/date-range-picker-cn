@@ -8,7 +8,7 @@
 
 > **DateInput**(`__namedParameters`): `Element`
 
-Defined in: [base/date-input.tsx:61](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-input.tsx#L61)
+Defined in: [base/date-input.tsx:61](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-input.tsx#L61)
 
 ## Parameters
 

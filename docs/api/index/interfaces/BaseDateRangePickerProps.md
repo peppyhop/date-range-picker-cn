@@ -6,7 +6,7 @@
 
 # Interface: BaseDateRangePickerProps
 
-Defined in: [base/date-range-picker.tsx:97](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L97)
+Defined in: [base/date-range-picker.tsx:97](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L97)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [base/date-range-picker.tsx:97](https://github.com/peppyhop/date-ran
 
 > `optional` **align?**: `"start"` \| `"center"` \| `"end"`
 
-Defined in: [base/date-range-picker.tsx:106](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L106)
+Defined in: [base/date-range-picker.tsx:106](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L106)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [base/date-range-picker.tsx:106](https://github.com/peppyhop/date-ra
 
 > `optional` **disabled?**: `boolean`
 
-Defined in: [base/date-range-picker.tsx:110](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L110)
+Defined in: [base/date-range-picker.tsx:110](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L110)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [base/date-range-picker.tsx:110](https://github.com/peppyhop/date-ra
 
 > `optional` **icons?**: [`BaseDateRangePickerIcons`](BaseDateRangePickerIcons.md)
 
-Defined in: [base/date-range-picker.tsx:111](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L111)
+Defined in: [base/date-range-picker.tsx:111](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L111)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [base/date-range-picker.tsx:111](https://github.com/peppyhop/date-ra
 
 > `optional` **initialCompareFrom?**: `string` \| `Date`
 
-Defined in: [base/date-range-picker.tsx:104](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L104)
+Defined in: [base/date-range-picker.tsx:104](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L104)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [base/date-range-picker.tsx:104](https://github.com/peppyhop/date-ra
 
 > `optional` **initialCompareTo?**: `string` \| `Date`
 
-Defined in: [base/date-range-picker.tsx:105](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L105)
+Defined in: [base/date-range-picker.tsx:105](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L105)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [base/date-range-picker.tsx:105](https://github.com/peppyhop/date-ra
 
 > `optional` **initialDateFrom?**: `string` \| `Date`
 
-Defined in: [base/date-range-picker.tsx:102](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L102)
+Defined in: [base/date-range-picker.tsx:102](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L102)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [base/date-range-picker.tsx:102](https://github.com/peppyhop/date-ra
 
 > `optional` **initialDateTo?**: `string` \| `Date`
 
-Defined in: [base/date-range-picker.tsx:103](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L103)
+Defined in: [base/date-range-picker.tsx:103](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L103)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [base/date-range-picker.tsx:103](https://github.com/peppyhop/date-ra
 
 > `optional` **locale?**: `string`
 
-Defined in: [base/date-range-picker.tsx:107](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L107)
+Defined in: [base/date-range-picker.tsx:107](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L107)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [base/date-range-picker.tsx:107](https://github.com/peppyhop/date-ra
 
 > `optional` **onUpdate?**: (`values`) => `void`
 
-Defined in: [base/date-range-picker.tsx:98](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L98)
+Defined in: [base/date-range-picker.tsx:98](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L98)
 
 #### Parameters
 
@@ -102,7 +102,7 @@ Defined in: [base/date-range-picker.tsx:98](https://github.com/peppyhop/date-ran
 
 > `optional` **placeholder?**: `string`
 
-Defined in: [base/date-range-picker.tsx:109](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L109)
+Defined in: [base/date-range-picker.tsx:109](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L109)
 
 ***
 
@@ -110,4 +110,4 @@ Defined in: [base/date-range-picker.tsx:109](https://github.com/peppyhop/date-ra
 
 > `optional` **showCompare?**: `boolean`
 
-Defined in: [base/date-range-picker.tsx:108](https://github.com/peppyhop/date-range-picker-cn/blob/26c2c48e19ba5e1d2ee4acf80e98375c10060799/src/base/date-range-picker.tsx#L108)
+Defined in: [base/date-range-picker.tsx:108](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-range-picker.tsx#L108)
