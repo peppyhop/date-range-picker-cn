@@ -5,7 +5,7 @@ import {
 import * as React from "react";
 import { DayPicker } from "react-day-picker";
 import type { DateRange } from "./date-input";
-import { SegmentedDateInput } from "./segmented-date-input.tsx";
+import { SegmentedDateInput } from "./segmented-date-input";
 
 export type DateRangePickerIcon = React.ComponentType<{ className?: string }>;
 
