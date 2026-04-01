@@ -3,6 +3,7 @@ import { Select } from "@base-ui/react/select";
 import * as React from "react";
 import { DayPicker } from "react-day-picker";
 import type { DateRange } from "./date-input";
+import { SegmentedDateInput } from "./segmented-date-input.tsx";
 
 export type DateRangePickerIcon = React.ComponentType<{ className?: string }>;
 
@@ -13,7 +14,7 @@ export interface DateRangePickerIcons {
 	ChevronRight?: DateRangePickerIcon;
 }
 
-function DefaultCalendarIcon({ className }: { className?: string }) {
+function renderDefaultCalendarIcon(className?: string): React.JSX.Element {
 	return (
 		<svg
 			viewBox="0 0 24 24"
@@ -33,7 +34,7 @@ function DefaultCalendarIcon({ className }: { className?: string }) {
 	);
 }
 
-function DefaultChevronLeftIcon({ className }: { className?: string }) {
+function renderDefaultChevronLeftIcon(className?: string): React.JSX.Element {
 	return (
 		<svg
 			viewBox="0 0 24 24"
@@ -50,7 +51,7 @@ function DefaultChevronLeftIcon({ className }: { className?: string }) {
 	);
 }
 
-function DefaultChevronRightIcon({ className }: { className?: string }) {
+function renderDefaultChevronRightIcon(className?: string): React.JSX.Element {
 	return (
 		<svg
 			viewBox="0 0 24 24"
@@ -67,7 +68,7 @@ function DefaultChevronRightIcon({ className }: { className?: string }) {
 	);
 }
 
-function DefaultCheckIcon({ className }: { className?: string }) {
+function renderDefaultCheckIcon(className?: string): React.JSX.Element {
 	return (
 		<svg
 			viewBox="0 0 24 24"
@@ -112,10 +113,14 @@ export interface DateRangePickerProps {
 }
 
 function toDate(value: Date | string | undefined): Date | undefined {
-	if (!value) return undefined;
-	if (value instanceof Date) return isNaN(value.getTime()) ? undefined : value;
+	if (!value) return;
+	if (value instanceof Date) {
+		if (Number.isNaN(value.getTime())) return;
+		return value;
+	}
 	const parsed = new Date(value);
-	return isNaN(parsed.getTime()) ? undefined : parsed;
+	if (Number.isNaN(parsed.getTime())) return;
+	return parsed;
 }
 
 function formatDate(date: Date, locale: string = "en-US"): string {
@@ -126,121 +131,25 @@ function formatDate(date: Date, locale: string = "en-US"): string {
 	}).format(date);
 }
 
-function formatDateParts(date: Date | undefined) {
-	return {
-		month: date ? String(date.getMonth() + 1) : "",
-		day: date ? String(date.getDate()) : "",
-		year: date ? String(date.getFullYear()) : "",
-	};
-}
+function renderTriggerLabel(
+	dateRange: DateRange,
+	locale: string,
+	placeholder: string,
+): React.JSX.Element {
+	const from = dateRange.from;
+	const to = dateRange.to;
 
-function parseDateParts(month: string, day: string, year: string) {
-	if (!month.trim() && !day.trim() && !year.trim()) return undefined;
-	if (!month.trim() || !day.trim() || !year.trim()) return null;
-
-	const parsedMonth = Number(month);
-	const parsedDay = Number(day);
-	const parsedYear = Number(year);
-
-	if (
-		!Number.isInteger(parsedMonth) ||
-		!Number.isInteger(parsedDay) ||
-		!Number.isInteger(parsedYear)
-	) {
-		return null;
-	}
-
-	const parsedDate = new Date(parsedYear, parsedMonth - 1, parsedDay);
-	if (
-		parsedDate.getFullYear() !== parsedYear ||
-		parsedDate.getMonth() !== parsedMonth - 1 ||
-		parsedDate.getDate() !== parsedDay
-	) {
-		return null;
-	}
-
-	return parsedDate;
-}
-
-interface SegmentedDateInputProps {
-	value: Date | undefined;
-	onChange: (date: Date | undefined) => void;
-	ariaLabel: string;
-	Icon: DateRangePickerIcon;
-}
-
-function SegmentedDateInput({
-	value,
-	onChange,
-	ariaLabel,
-	Icon,
-}: SegmentedDateInputProps) {
-	const [parts, setParts] = React.useState(() => formatDateParts(value));
-
-	React.useEffect(() => {
-		setParts(formatDateParts(value));
-	}, [value]);
-
-	const updatePart = (
-		part: keyof ReturnType<typeof formatDateParts>,
-		nextValue: string,
-	) => {
-		const sanitizedValue = nextValue.replace(/\D/g, "");
-		const trimmedValue =
-			part === "year" ? sanitizedValue.slice(0, 4) : sanitizedValue.slice(0, 2);
-		const nextParts = { ...parts, [part]: trimmedValue };
-		setParts(nextParts);
-
-		const parsedDate = parseDateParts(
-			nextParts.month,
-			nextParts.day,
-			nextParts.year,
-		);
-		if (parsedDate !== null) {
-			onChange(parsedDate);
-		}
-	};
-
-	const resetParts = () => {
-		setParts(formatDateParts(value));
-	};
+	if (!from && !to) return <>{placeholder}</>;
+	if (from && !to) return <>{formatDate(from, locale)}</>;
+	if (!from && to) return <>{formatDate(to, locale)}</>;
+	if (!from || !to) return <>{placeholder}</>;
 
 	return (
-		<div className="flex items-center gap-1.5 rounded-xl border border-border/70 bg-background px-2.5 py-1.5">
-			<input
-				type="text"
-				inputMode="numeric"
-				aria-label={`${ariaLabel} month`}
-				value={parts.month}
-				onChange={(event) => updatePart("month", event.target.value)}
-				onBlur={resetParts}
-				onFocus={(event) => event.currentTarget.select()}
-				className="w-5 bg-transparent text-center text-sm font-medium text-foreground outline-none"
-			/>
-			<span className="text-muted-foreground">/</span>
-			<input
-				type="text"
-				inputMode="numeric"
-				aria-label={`${ariaLabel} day`}
-				value={parts.day}
-				onChange={(event) => updatePart("day", event.target.value)}
-				onBlur={resetParts}
-				onFocus={(event) => event.currentTarget.select()}
-				className="w-5 bg-transparent text-center text-sm font-medium text-foreground outline-none"
-			/>
-			<span className="text-muted-foreground">/</span>
-			<input
-				type="text"
-				inputMode="numeric"
-				aria-label={`${ariaLabel} year`}
-				value={parts.year}
-				onChange={(event) => updatePart("year", event.target.value)}
-				onBlur={resetParts}
-				onFocus={(event) => event.currentTarget.select()}
-				className="w-9 bg-transparent text-center text-sm font-medium text-foreground outline-none"
-			/>
-			<Icon className="size-3.5 text-muted-foreground" />
-		</div>
+		<>
+			{formatDate(from, locale)}
+			{" - "}
+			{formatDate(to, locale)}
+		</>
 	);
 }
 
@@ -261,11 +170,6 @@ function getStartOfWeek(date: Date): Date {
 	return nextDate;
 }
 
-function getEndOfWeek(date: Date): Date {
-	const start = getStartOfWeek(date);
-	return addDays(start, 6);
-}
-
 function getEndOfMonth(date: Date): Date {
 	return new Date(date.getFullYear(), date.getMonth() + 1, 0);
 }
@@ -284,6 +188,11 @@ function addDays(date: Date, days: number): Date {
 	return nextDate;
 }
 
+function getEndOfWeek(date: Date): Date {
+	const start = getStartOfWeek(date);
+	return addDays(start, 6);
+}
+
 function startOfDay(date: Date): Date {
 	const nextDate = new Date(date);
 	nextDate.setHours(0, 0, 0, 0);
@@ -291,7 +200,7 @@ function startOfDay(date: Date): Date {
 }
 
 function getPreviousPeriod(range: DateRange): CompareDateRange | undefined {
-	if (!range.from || !range.to) return undefined;
+	if (!range.from || !range.to) return;
 	const from = startOfDay(range.from);
 	const to = startOfDay(range.to);
 	const days =
@@ -312,15 +221,15 @@ function formatDateInput(date: Date | undefined): string {
 	return `${year}-${month}-${day}`;
 }
 
-function useIsMobile(breakpoint = 768) {
+function useIsMobile(breakpoint = 768): boolean {
 	const [isMobile, setIsMobile] = React.useState(false);
 
 	React.useEffect(() => {
 		const mediaQuery = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
-		const update = () => setIsMobile(mediaQuery.matches);
+		const update = (): void => setIsMobile(mediaQuery.matches);
 		update();
 		mediaQuery.addEventListener("change", update);
-		return () => mediaQuery.removeEventListener("change", update);
+		return (): void => mediaQuery.removeEventListener("change", update);
 	}, [breakpoint]);
 
 	return isMobile;
@@ -338,11 +247,11 @@ export function DateRangePicker({
 	placeholder = "Select date range...",
 	disabled = false,
 	icons,
-}: DateRangePickerProps) {
-	const CalendarIcon = icons?.Calendar ?? DefaultCalendarIcon;
-	const ChevronLeftIcon = icons?.ChevronLeft ?? DefaultChevronLeftIcon;
-	const ChevronRightIcon = icons?.ChevronRight ?? DefaultChevronRightIcon;
-	const CheckIcon = icons?.Check ?? DefaultCheckIcon;
+}: DateRangePickerProps): React.JSX.Element {
+	const CalendarIcon = icons?.Calendar;
+	const ChevronLeftIcon = icons?.ChevronLeft;
+	const ChevronRightIcon = icons?.ChevronRight;
+	const CheckIcon = icons?.Check;
 	const isMobile = useIsMobile();
 	const initialRange = React.useMemo<DateRange>(
 		() => ({
@@ -449,29 +358,27 @@ export function DateRangePicker({
 		[draftCompareEnabled],
 	);
 
-	const handlePresetClick = (preset: PresetDateRange) => {
+	const handlePresetClick = (preset: PresetDateRange): void => {
 		handleDateRangeChange(preset.dateRange);
 		setVisibleMonth(startOfDay(preset.dateRange.from ?? new Date()));
 	};
 
-	const formatDateDisplay = (date: Date | undefined): string => {
-		if (!date) return "Select date";
-		return formatDate(date, locale);
-	};
-
-	const applyChanges = () => {
+	const applyChanges = (): void => {
 		setDateRange(draftDateRange);
 		setCompareEnabled(draftCompareEnabled);
 		setCompareDateRange(draftCompareDateRange);
+		let nextCompareDateRange: CompareDateRange | undefined;
+		if (showCompare && draftCompareEnabled) {
+			nextCompareDateRange = draftCompareDateRange;
+		}
 		onUpdate?.({
 			dateRange: draftDateRange,
-			compareDateRange:
-				showCompare && draftCompareEnabled ? draftCompareDateRange : undefined,
+			compareDateRange: nextCompareDateRange,
 		});
 		setIsOpen(false);
 	};
 
-	const cancelChanges = () => {
+	const cancelChanges = (): void => {
 		syncDraftState();
 		setIsOpen(false);
 	};
@@ -516,15 +423,15 @@ export function DateRangePicker({
 					}
 				>
 					<span className="min-w-0 flex-1 truncate text-left font-medium text-foreground">
-						{dateRange.from ? formatDateDisplay(dateRange.from) : placeholder}
-						{dateRange.from && dateRange.to && (
-							<>
-								{" - "}
-								{formatDateDisplay(dateRange.to)}
-							</>
-						)}
+						{renderTriggerLabel(dateRange, locale, placeholder)}
 					</span>
-					<CalendarIcon className="size-4 shrink-0 text-muted-foreground transition group-hover:text-foreground" />
+					{CalendarIcon ? (
+						<CalendarIcon className="size-4 shrink-0 text-muted-foreground transition group-hover:text-foreground" />
+					) : (
+						renderDefaultCalendarIcon(
+							"size-4 shrink-0 text-muted-foreground transition group-hover:text-foreground",
+						)
+					)}
 				</Popover.Trigger>
 				<Popover.Portal>
 					<Popover.Positioner align={align} sideOffset={8}>
@@ -578,7 +485,13 @@ export function DateRangePicker({
 											<Select.Trigger className="flex h-11 w-full items-center justify-between rounded-xl border border-border/70 bg-background px-4 text-sm font-medium text-foreground outline-none transition focus-visible:ring-2 focus-visible:ring-ring/60">
 												<Select.Value placeholder="Select preset" />
 												<Select.Icon>
-													<ChevronRightIcon className="size-4 rotate-90 text-muted-foreground" />
+													{ChevronRightIcon ? (
+														<ChevronRightIcon className="size-4 rotate-90 text-muted-foreground" />
+													) : (
+														renderDefaultChevronRightIcon(
+															"size-4 rotate-90 text-muted-foreground",
+														)
+													)}
 												</Select.Icon>
 											</Select.Trigger>
 											<Select.Portal>
@@ -615,7 +528,11 @@ export function DateRangePicker({
 													}
 													className="pointer-events-auto inline-flex size-8 items-center justify-center rounded-lg border border-border/70 bg-background text-foreground transition hover:bg-accent"
 												>
-													<ChevronLeftIcon className="size-4" />
+													{ChevronLeftIcon ? (
+														<ChevronLeftIcon className="size-4" />
+													) : (
+														renderDefaultChevronLeftIcon("size-4")
+													)}
 												</button>
 												<button
 													type="button"
@@ -624,7 +541,11 @@ export function DateRangePicker({
 													}
 													className="pointer-events-auto inline-flex size-8 items-center justify-center rounded-lg border border-border/70 bg-background text-foreground transition hover:bg-accent"
 												>
-													<ChevronRightIcon className="size-4" />
+													{ChevronRightIcon ? (
+														<ChevronRightIcon className="size-4" />
+													) : (
+														renderDefaultChevronRightIcon("size-4")
+													)}
 												</button>
 											</div>
 											<DayPicker
@@ -686,9 +607,12 @@ export function DateRangePicker({
 															: "text-muted-foreground hover:bg-muted hover:text-foreground"
 													}`}
 												>
-													{isActive && (
-														<CheckIcon className="size-4 text-primary" />
-													)}
+													{isActive &&
+														(CheckIcon ? (
+															<CheckIcon className="size-4 text-primary" />
+														) : (
+															renderDefaultCheckIcon("size-4 text-primary")
+														))}
 													<span>{preset.label}</span>
 												</button>
 											);

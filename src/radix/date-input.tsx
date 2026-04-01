@@ -6,7 +6,7 @@ export interface DateInputIcons {
 	Calendar?: DateInputIcon;
 }
 
-function DefaultCalendarIcon({ className }: { className?: string }) {
+function renderDefaultCalendarIcon(className?: string): React.JSX.Element {
 	return (
 		<svg
 			viewBox="0 0 24 24"
@@ -50,7 +50,7 @@ function formatDate(date: Date, locale: string = "en-US"): string {
 }
 
 function isValidDate(date: Date): boolean {
-	return !isNaN(date.getTime());
+	return !Number.isNaN(date.getTime());
 }
 
 function parseDate(value: string): Date | null {
@@ -66,8 +66,8 @@ export function DateInput({
 	className = "",
 	locale = "en-US",
 	icons,
-}: DateInputProps) {
-	const CalendarIcon = icons?.Calendar ?? DefaultCalendarIcon;
+}: DateInputProps): React.JSX.Element {
+		const CalendarIcon = icons?.Calendar;
 	const [inputValue, setInputValue] = React.useState("");
 	const [isFocused, setIsFocused] = React.useState(false);
 
@@ -81,7 +81,7 @@ export function DateInput({
 		return placeholder;
 	};
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
 		const value = e.target.value;
 		setInputValue(value);
 
@@ -95,12 +95,12 @@ export function DateInput({
 		}
 	};
 
-	const handleBlur = () => {
+	const handleBlur = (): void => {
 		setIsFocused(false);
 		setInputValue("");
 	};
 
-	const handleFocus = () => {
+	const handleFocus = (): void => {
 		setIsFocused(true);
 	};
 
@@ -116,7 +116,13 @@ export function DateInput({
 				disabled={disabled}
 				className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
 			/>
-			<CalendarIcon className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+				{CalendarIcon ? (
+					<CalendarIcon className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+				) : (
+					renderDefaultCalendarIcon(
+						"absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none",
+					)
+				)}
 		</div>
 	);
 }

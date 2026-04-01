@@ -1,5 +1,5 @@
 import { Check, ExternalLink, Layers3, Sparkles } from "lucide-react";
-import { useMemo, useState } from "react";
+import * as React from "react";
 import { DateRangePicker } from "./base/date-range-picker";
 import { DateRangePicker as DateRangePickerRadix } from "./radix/date-range-picker";
 
@@ -13,7 +13,7 @@ interface DateRangePayload {
 	compareDateRange?: DateRange;
 }
 
-function formatDate(date: Date | undefined) {
+function formatDate(date: Date | undefined): string {
 	if (!date) return "—";
 	return new Intl.DateTimeFormat("en-US", {
 		month: "short",
@@ -22,7 +22,7 @@ function formatDate(date: Date | undefined) {
 	}).format(date);
 }
 
-function formatPayload(payload: DateRangePayload) {
+function formatPayload(payload: DateRangePayload): string {
 	return JSON.stringify(
 		{
 			dateRange: {
@@ -43,18 +43,18 @@ function formatPayload(payload: DateRangePayload) {
 	);
 }
 
-function App() {
-	const defaultTo = useMemo(
+export function App(): React.JSX.Element {
+	const defaultTo = React.useMemo(
 		() => new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
 		[],
 	);
-	const [basePayload, setBasePayload] = useState<DateRangePayload>({
+	const [basePayload, setBasePayload] = React.useState<DateRangePayload>({
 		dateRange: {
 			from: new Date(),
 			to: defaultTo,
 		},
 	});
-	const [radixPayload, setRadixPayload] = useState<DateRangePayload>({
+	const [radixPayload, setRadixPayload] = React.useState<DateRangePayload>({
 		dateRange: {
 			from: new Date(),
 			to: defaultTo,
@@ -382,5 +382,3 @@ export function Example() {
 		</div>
 	);
 }
-
-export default App;

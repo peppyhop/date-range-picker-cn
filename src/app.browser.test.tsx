@@ -1,8 +1,9 @@
+import * as React from "react";
 import { describe, expect, it } from "vitest";
 import { createRoot } from "react-dom/client";
-import App from "./App";
+import { App } from "./App";
 
-async function nextTick() {
+async function nextTick(): Promise<void> {
 	await new Promise<void>((resolve) => {
 		setTimeout(() => resolve(), 0);
 	});
@@ -11,27 +12,30 @@ async function nextTick() {
 	});
 }
 
-function renderApp() {
+function renderApp(): {
+	container: HTMLDivElement;
+	unmount: () => void;
+} {
 	const container = document.createElement("div");
 	document.body.appendChild(container);
 	const root = createRoot(container);
 	root.render(<App />);
 	return {
 		container,
-		unmount: () => {
+		unmount: (): void => {
 			root.unmount();
 			container.remove();
 		},
 	};
 }
 
-function findButtonByExactText(text: string) {
+function findButtonByExactText(text: string): HTMLButtonElement | undefined {
 	return Array.from(document.querySelectorAll("button")).find((button) => {
 		return button.textContent?.trim() === text;
-	});
+	}) as HTMLButtonElement | undefined;
 }
 
-function parseJsonFromPreElements() {
+function parseJsonFromPreElements(): unknown[] {
 	return Array.from(document.querySelectorAll("pre")).map((pre) => {
 		const text = pre.textContent ?? "";
 		return JSON.parse(text) as unknown;
