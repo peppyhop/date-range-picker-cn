@@ -8,7 +8,7 @@
 
 > **DateInputRadix**(`__namedParameters`): `Element`
 
-Defined in: [radix/date-input.tsx:61](https://github.com/peppyhop/date-range-picker-cn/blob/ccda1204906d95a49e8beaaed89dea734c01a0d8/src/radix/date-input.tsx#L61)
+Defined in: [radix/date-input.tsx:61](https://github.com/peppyhop/date-range-picker-cn/blob/cfb8c6ff1b99618b827a9a10ff720a10cd99582a/src/radix/date-input.tsx#L61)
 
 ## Parameters
 
