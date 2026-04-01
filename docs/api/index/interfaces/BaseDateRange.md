@@ -6,7 +6,7 @@
 
 # Interface: BaseDateRange
 
-Defined in: [base/date-input.tsx:29](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/base/date-input.tsx#L29)
+Defined in: [base/date-input.tsx:29](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/base/date-input.tsx#L29)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [base/date-input.tsx:29](https://github.com/peppyhop/date-range-pick
 
 > **from**: `Date` \| `undefined`
 
-Defined in: [base/date-input.tsx:30](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/base/date-input.tsx#L30)
+Defined in: [base/date-input.tsx:30](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/base/date-input.tsx#L30)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [base/date-input.tsx:30](https://github.com/peppyhop/date-range-pick
 
 > **to**: `Date` \| `undefined`
 
-Defined in: [base/date-input.tsx:31](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/base/date-input.tsx#L31)
+Defined in: [base/date-input.tsx:31](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/base/date-input.tsx#L31)

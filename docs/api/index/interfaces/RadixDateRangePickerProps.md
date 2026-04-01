@@ -6,7 +6,7 @@
 
 # Interface: RadixDateRangePickerProps
 
-Defined in: [radix/date-range-picker.tsx:99](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L99)
+Defined in: [radix/date-range-picker.tsx:99](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L99)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [radix/date-range-picker.tsx:99](https://github.com/peppyhop/date-ra
 
 > `optional` **align?**: `"start"` \| `"center"` \| `"end"`
 
-Defined in: [radix/date-range-picker.tsx:108](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L108)
+Defined in: [radix/date-range-picker.tsx:108](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L108)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [radix/date-range-picker.tsx:108](https://github.com/peppyhop/date-r
 
 > `optional` **disabled?**: `boolean`
 
-Defined in: [radix/date-range-picker.tsx:112](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L112)
+Defined in: [radix/date-range-picker.tsx:112](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L112)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [radix/date-range-picker.tsx:112](https://github.com/peppyhop/date-r
 
 > `optional` **icons?**: [`RadixDateRangePickerIcons`](RadixDateRangePickerIcons.md)
 
-Defined in: [radix/date-range-picker.tsx:113](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L113)
+Defined in: [radix/date-range-picker.tsx:113](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L113)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [radix/date-range-picker.tsx:113](https://github.com/peppyhop/date-r
 
 > `optional` **initialCompareFrom?**: `string` \| `Date`
 
-Defined in: [radix/date-range-picker.tsx:106](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L106)
+Defined in: [radix/date-range-picker.tsx:106](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L106)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [radix/date-range-picker.tsx:106](https://github.com/peppyhop/date-r
 
 > `optional` **initialCompareTo?**: `string` \| `Date`
 
-Defined in: [radix/date-range-picker.tsx:107](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L107)
+Defined in: [radix/date-range-picker.tsx:107](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L107)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [radix/date-range-picker.tsx:107](https://github.com/peppyhop/date-r
 
 > `optional` **initialDateFrom?**: `string` \| `Date`
 
-Defined in: [radix/date-range-picker.tsx:104](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L104)
+Defined in: [radix/date-range-picker.tsx:104](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L104)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [radix/date-range-picker.tsx:104](https://github.com/peppyhop/date-r
 
 > `optional` **initialDateTo?**: `string` \| `Date`
 
-Defined in: [radix/date-range-picker.tsx:105](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L105)
+Defined in: [radix/date-range-picker.tsx:105](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L105)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [radix/date-range-picker.tsx:105](https://github.com/peppyhop/date-r
 
 > `optional` **locale?**: `string`
 
-Defined in: [radix/date-range-picker.tsx:109](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L109)
+Defined in: [radix/date-range-picker.tsx:109](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L109)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [radix/date-range-picker.tsx:109](https://github.com/peppyhop/date-r
 
 > `optional` **onUpdate?**: (`values`) => `void`
 
-Defined in: [radix/date-range-picker.tsx:100](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L100)
+Defined in: [radix/date-range-picker.tsx:100](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L100)
 
 #### Parameters
 
@@ -102,7 +102,7 @@ Defined in: [radix/date-range-picker.tsx:100](https://github.com/peppyhop/date-r
 
 > `optional` **placeholder?**: `string`
 
-Defined in: [radix/date-range-picker.tsx:111](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L111)
+Defined in: [radix/date-range-picker.tsx:111](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L111)
 
 ***
 
@@ -110,4 +110,4 @@ Defined in: [radix/date-range-picker.tsx:111](https://github.com/peppyhop/date-r
 
 > `optional` **showCompare?**: `boolean`
 
-Defined in: [radix/date-range-picker.tsx:110](https://github.com/peppyhop/date-range-picker-cn/blob/44a1e433fbe11dbfd3c559994500778745d10116/src/radix/date-range-picker.tsx#L110)
+Defined in: [radix/date-range-picker.tsx:110](https://github.com/peppyhop/date-range-picker-cn/blob/b9bed1e3b3b8453e434dbf579e824c9775d1b2af/src/radix/date-range-picker.tsx#L110)
