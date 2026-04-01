@@ -6,7 +6,7 @@
 
 # Interface: RadixCompareDateRange
 
-Defined in: [radix/date-range-picker.tsx:89](https://github.com/peppyhop/date-range-picker-cn/blob/cfb8c6ff1b99618b827a9a10ff720a10cd99582a/src/radix/date-range-picker.tsx#L89)
+Defined in: [radix/date-range-picker.tsx:89](https://github.com/peppyhop/date-range-picker-cn/blob/14bbd1c3f1d50c2e8f20a464b6285404be14f1d6/src/radix/date-range-picker.tsx#L89)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [radix/date-range-picker.tsx:89](https://github.com/peppyhop/date-ra
 
 > **from**: `Date` \| `undefined`
 
-Defined in: [radix/date-range-picker.tsx:90](https://github.com/peppyhop/date-range-picker-cn/blob/cfb8c6ff1b99618b827a9a10ff720a10cd99582a/src/radix/date-range-picker.tsx#L90)
+Defined in: [radix/date-range-picker.tsx:90](https://github.com/peppyhop/date-range-picker-cn/blob/14bbd1c3f1d50c2e8f20a464b6285404be14f1d6/src/radix/date-range-picker.tsx#L90)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [radix/date-range-picker.tsx:90](https://github.com/peppyhop/date-ra
 
 > **to**: `Date` \| `undefined`
 
-Defined in: [radix/date-range-picker.tsx:91](https://github.com/peppyhop/date-range-picker-cn/blob/cfb8c6ff1b99618b827a9a10ff720a10cd99582a/src/radix/date-range-picker.tsx#L91)
+Defined in: [radix/date-range-picker.tsx:91](https://github.com/peppyhop/date-range-picker-cn/blob/14bbd1c3f1d50c2e8f20a464b6285404be14f1d6/src/radix/date-range-picker.tsx#L91)
