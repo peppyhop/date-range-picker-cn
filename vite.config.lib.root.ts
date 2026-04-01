@@ -4,9 +4,11 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
 	plugins: [react()],
+	publicDir: false,
 	build: {
 		outDir: "dist",
 		emptyOutDir: true,
+		copyPublicDir: false,
 		lib: {
 			entry: resolve(__dirname, "src/index.ts"),
 			formats: ["es", "umd"],
