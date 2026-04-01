@@ -43,6 +43,7 @@ npm install date-range-picker-cn radix-ui react-day-picker
 The package ships Tailwind class names. Your Tailwind build must scan the package files to generate the required styles.
 
 For Tailwind v3 (`tailwind.config.ts`):
+
 ```ts
 export default {
   content: [
@@ -53,6 +54,7 @@ export default {
 ```
 
 For Tailwind v4 (in your main CSS file):
+
 ```css
 @source "../node_modules/date-range-picker-cn/dist/**/*.{js,mjs,cjs}";
 ```
@@ -88,12 +90,7 @@ Import from the `/radix` subpath for the Radix UI variant.
 import { DateRangePicker } from "date-range-picker-cn/radix";
 
 export function Example() {
-  return (
-    <DateRangePicker 
-      align="end" 
-      showCompare={false} 
-    />
-  );
+  return <DateRangePicker align="end" showCompare={false} />;
 }
 ```
 
@@ -102,15 +99,15 @@ export function Example() {
 ### CRITICAL Missing Tailwind Content Configuration
 
 Wrong:
+
 ```ts
 export default {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
 };
 ```
 
 Correct:
+
 ```ts
 export default {
   content: [
@@ -119,35 +116,41 @@ export default {
   ],
 };
 ```
+
 Without the node_modules path in the content array (or `@source` in v4), the component will render without styles because Tailwind won't generate the necessary utility classes.
 Source: README.md
 
 ### HIGH Incorrect Import for Radix Variant
 
 Wrong:
+
 ```tsx
 import { DateRangePicker } from "date-range-picker-cn";
 // Attempting to use Radix UI without the correct import path
 ```
 
 Correct:
+
 ```tsx
 import { DateRangePicker } from "date-range-picker-cn/radix";
 ```
+
 The root export exposes the Base UI variant. To use the Radix UI variant, you must import from `date-range-picker-cn/radix`.
 Source: README.md
 
 ### HIGH Missing Peer Dependencies
 
 Wrong:
+
 ```bash
 npm install date-range-picker-cn
 ```
 
 Correct:
+
 ```bash
 npm install date-range-picker-cn @base-ui/react react-day-picker
 ```
+
 The library requires peer dependencies to function correctly. If installing via npm, you must explicitly install the required peer dependencies depending on the variant you choose.
 Source: README.md
-

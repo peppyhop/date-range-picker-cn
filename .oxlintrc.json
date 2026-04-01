@@ -1,35 +1,32 @@
 {
-	"$schema": "./node_modules/oxlint/configuration_schema.json",
-	"plugins": ["typescript", "react", "unicorn", "import", "jsx-a11y"],
-	"categories": {
-		"correctness": "error",
-		"suspicious": "error",
-		"pedantic": "warn",
-		"perf": "error",
-		"style": "warn",
-		"restriction": "error"
-	},
-	"rules": {
-		"no-console": "off",
-		"no-debugger": "error",
-		"typescript/no-explicit-any": "warn",
-		"react/jsx-key": "error",
-		"react/jsx-filename-extension": [
-			"error",
-			{ "extensions": [".jsx", ".tsx"] }
-		],
-		"import/no-unassigned-import": ["error", { "allow": ["**/*.css"] }],
-		"unicorn/prefer-string-slice": "off",
-		"unicorn/prefer-code-point": "off"
-	},
-	"ignorePatterns": [
-		"**/node_modules/**",
-		"**/dist/**",
-		"**/dist-site/**",
-		"vite.config.ts",
-		"vite.config.lib.*.ts",
-		"commitlint.config.mjs",
-		"**/*.min.js",
-		"**/coverage/**"
-	]
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "unicorn", "import", "jsx-a11y"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "pedantic": "warn",
+    "perf": "error",
+    "style": "warn",
+    "restriction": "error"
+  },
+  "rules": {
+    "no-console": "off",
+    "no-debugger": "error",
+    "typescript/no-explicit-any": "warn",
+    "react/jsx-key": "error",
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+    "import/no-unassigned-import": ["error", { "allow": ["**/*.css"] }],
+    "unicorn/prefer-string-slice": "off",
+    "unicorn/prefer-code-point": "off"
+  },
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/dist-site/**",
+    "vite.config.ts",
+    "vite.config.lib.*.ts",
+    "commitlint.config.mjs",
+    "**/*.min.js",
+    "**/coverage/**"
+  ]
 }

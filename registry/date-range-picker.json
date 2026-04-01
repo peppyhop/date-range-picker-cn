@@ -1,21 +1,21 @@
 {
-	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
-	"name": "date-range-picker",
-	"type": "components:ui",
-	"displayName": "Date Range Picker",
-	"description": "A date range picker component with preset ranges and optional comparison feature.",
-	"dependencies": ["@base-ui/react", "lucide-react", "react-day-picker"],
-	"files": [
-		{
-			"path": "src/base/date-range-picker.tsx",
-			"target": "components/ui/date-range-picker.tsx",
-			"type": "components:ui"
-		},
-		{
-			"path": "src/base/date-input.tsx",
-			"target": "components/ui/date-input.tsx",
-			"type": "components:ui"
-		}
-	],
-	"registrySchema": "2024-11-20"
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-range-picker",
+  "type": "components:ui",
+  "displayName": "Date Range Picker",
+  "description": "A date range picker component with preset ranges and optional comparison feature.",
+  "dependencies": ["@base-ui/react", "lucide-react", "react-day-picker"],
+  "files": [
+    {
+      "path": "src/base/date-range-picker.tsx",
+      "target": "components/ui/date-range-picker.tsx",
+      "type": "components:ui"
+    },
+    {
+      "path": "src/base/date-input.tsx",
+      "target": "components/ui/date-input.tsx",
+      "type": "components:ui"
+    }
+  ],
+  "registrySchema": "2024-11-20"
 }

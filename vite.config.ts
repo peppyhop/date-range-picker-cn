@@ -8,36 +8,35 @@ import { defineConfig } from "vitest/config";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-	plugins: [react(), tailwindcss()],
-	base: "/date-range-picker-cn/",
-	build: {
-		outDir: "dist-site",
-		emptyOutDir: true,
-		rollupOptions: {
-			output: {
-				manualChunks(id) {
-					if (!id.includes("node_modules")) return;
-					if (id.includes("react-day-picker")) return "day-picker";
-					if (id.includes("lucide-react")) return "icons";
-					if (id.includes("@base-ui") || id.includes("radix-ui")) return "ui";
-					if (id.includes("/react/") || id.includes("/react-dom/"))
-						return "react";
-					return "vendor";
-				},
-			},
-		},
-	},
-	resolve: {
-		alias: {
-			"@": resolve(__dirname, "./src"),
-		},
-	},
-	test: {
-		include: ["src/**/*.browser.test.{ts,tsx}"],
-		browser: {
-			enabled: true,
-			provider: playwright(),
-			instances: [{ browser: "chromium" }],
-		},
-	},
+  plugins: [react(), tailwindcss()],
+  base: "/date-range-picker-cn/",
+  build: {
+    outDir: "dist-site",
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          if (id.includes("react-day-picker")) return "day-picker";
+          if (id.includes("lucide-react")) return "icons";
+          if (id.includes("@base-ui") || id.includes("radix-ui")) return "ui";
+          if (id.includes("/react/") || id.includes("/react-dom/")) return "react";
+          return "vendor";
+        },
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./src"),
+    },
+  },
+  test: {
+    include: ["src/**/*.browser.test.{ts,tsx}"],
+    browser: {
+      enabled: true,
+      provider: playwright(),
+      instances: [{ browser: "chromium" }],
+    },
+  },
 });

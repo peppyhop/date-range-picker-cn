@@ -1,6 +1,6 @@
 [**date-range-picker-cn**](../../README.md)
 
-***
+---
 
 [date-range-picker-cn](../../README.md) / [index](../README.md) / BaseDateInputIcons
 

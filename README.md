@@ -78,10 +78,10 @@ This package ships Tailwind class names, so your Tailwind build must scan the pa
 
 ```ts
 export default {
-	content: [
-		"./src/**/*.{js,ts,jsx,tsx,mdx}",
-		"./node_modules/date-range-picker-cn/dist/**/*.{js,mjs,cjs}",
-	],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/date-range-picker-cn/dist/**/*.{js,mjs,cjs}",
+  ],
 };
 ```
 
@@ -105,12 +105,7 @@ Use the picker from a Client Component (a file that starts with `use client`).
 import { DateRangePicker } from "date-range-picker-cn";
 
 export function Example() {
-	return (
-		<DateRangePicker
-			initialDateFrom={new Date()}
-			placeholder="Select date range..."
-		/>
-	);
+  return <DateRangePicker initialDateFrom={new Date()} placeholder="Select date range..." />;
 }
 ```
 
@@ -118,7 +113,7 @@ export function Example() {
 import { DateRangePicker } from "date-range-picker-cn/radix";
 
 export function Example() {
-	return <DateRangePicker align="end" showCompare={false} />;
+  return <DateRangePicker align="end" showCompare={false} />;
 }
 ```
 

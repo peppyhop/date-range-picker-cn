@@ -1,5 +1,5 @@
 {
-	"compilerOptions": {
+  "compilerOptions": {
     "target": "ES2023",
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
     "module": "ESNext",
@@ -14,6 +14,6 @@
     "outDir": "./dist",
     "rootDir": "./src"
   },
-	"include": ["src/index.ts", "src/base/**/*", "src/radix/**/*"],
-	"exclude": ["**/*.test.*", "src/App.tsx", "src/main.tsx"]
+  "include": ["src/index.ts", "src/base/**/*", "src/radix/**/*"],
+  "exclude": ["**/*.test.*", "src/App.tsx", "src/main.tsx"]
 }

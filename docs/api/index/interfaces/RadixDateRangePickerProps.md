@@ -1,6 +1,6 @@
 [**date-range-picker-cn**](../../README.md)
 
-***
+---
 
 [date-range-picker-cn](../../README.md) / [index](../README.md) / RadixDateRangePickerProps
 
@@ -16,7 +16,7 @@ Defined in: [radix/date-range-picker.tsx:99](https://github.com/peppyhop/date-ra
 
 Defined in: [radix/date-range-picker.tsx:108](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L108)
 
-***
+---
 
 ### disabled?
 
@@ -24,7 +24,7 @@ Defined in: [radix/date-range-picker.tsx:108](https://github.com/peppyhop/date-r
 
 Defined in: [radix/date-range-picker.tsx:112](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L112)
 
-***
+---
 
 ### icons?
 
@@ -32,7 +32,7 @@ Defined in: [radix/date-range-picker.tsx:112](https://github.com/peppyhop/date-r
 
 Defined in: [radix/date-range-picker.tsx:113](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L113)
 
-***
+---
 
 ### initialCompareFrom?
 
@@ -40,7 +40,7 @@ Defined in: [radix/date-range-picker.tsx:113](https://github.com/peppyhop/date-r
 
 Defined in: [radix/date-range-picker.tsx:106](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L106)
 
-***
+---
 
 ### initialCompareTo?
 
@@ -48,7 +48,7 @@ Defined in: [radix/date-range-picker.tsx:106](https://github.com/peppyhop/date-r
 
 Defined in: [radix/date-range-picker.tsx:107](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L107)
 
-***
+---
 
 ### initialDateFrom?
 
@@ -56,7 +56,7 @@ Defined in: [radix/date-range-picker.tsx:107](https://github.com/peppyhop/date-r
 
 Defined in: [radix/date-range-picker.tsx:104](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L104)
 
-***
+---
 
 ### initialDateTo?
 
@@ -64,7 +64,7 @@ Defined in: [radix/date-range-picker.tsx:104](https://github.com/peppyhop/date-r
 
 Defined in: [radix/date-range-picker.tsx:105](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L105)
 
-***
+---
 
 ### locale?
 
@@ -72,7 +72,7 @@ Defined in: [radix/date-range-picker.tsx:105](https://github.com/peppyhop/date-r
 
 Defined in: [radix/date-range-picker.tsx:109](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L109)
 
-***
+---
 
 ### onUpdate?
 
@@ -96,7 +96,7 @@ Defined in: [radix/date-range-picker.tsx:100](https://github.com/peppyhop/date-r
 
 `void`
 
-***
+---
 
 ### placeholder?
 
@@ -104,7 +104,7 @@ Defined in: [radix/date-range-picker.tsx:100](https://github.com/peppyhop/date-r
 
 Defined in: [radix/date-range-picker.tsx:111](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L111)
 
-***
+---
 
 ### showCompare?
 

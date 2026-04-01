@@ -1,6 +1,6 @@
 [**date-range-picker-cn**](../../README.md)
 
-***
+---
 
 [date-range-picker-cn](../../README.md) / [index](../README.md) / BaseDateInputProps
 
@@ -16,7 +16,7 @@ Defined in: [base/date-input.tsx:34](https://github.com/peppyhop/date-range-pick
 
 Defined in: [base/date-input.tsx:39](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-input.tsx#L39)
 
-***
+---
 
 ### dateRange
 
@@ -24,7 +24,7 @@ Defined in: [base/date-input.tsx:39](https://github.com/peppyhop/date-range-pick
 
 Defined in: [base/date-input.tsx:35](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-input.tsx#L35)
 
-***
+---
 
 ### disabled?
 
@@ -32,7 +32,7 @@ Defined in: [base/date-input.tsx:35](https://github.com/peppyhop/date-range-pick
 
 Defined in: [base/date-input.tsx:38](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-input.tsx#L38)
 
-***
+---
 
 ### icons?
 
@@ -40,7 +40,7 @@ Defined in: [base/date-input.tsx:38](https://github.com/peppyhop/date-range-pick
 
 Defined in: [base/date-input.tsx:41](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-input.tsx#L41)
 
-***
+---
 
 ### locale?
 
@@ -48,7 +48,7 @@ Defined in: [base/date-input.tsx:41](https://github.com/peppyhop/date-range-pick
 
 Defined in: [base/date-input.tsx:40](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-input.tsx#L40)
 
-***
+---
 
 ### placeholder?
 
@@ -56,7 +56,7 @@ Defined in: [base/date-input.tsx:40](https://github.com/peppyhop/date-range-pick
 
 Defined in: [base/date-input.tsx:37](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/base/date-input.tsx#L37)
 
-***
+---
 
 ### setDateRange
 

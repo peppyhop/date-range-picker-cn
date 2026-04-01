@@ -1,6 +1,6 @@
 [**date-range-picker-cn**](../../README.md)
 
-***
+---
 
 [date-range-picker-cn](../../README.md) / [index](../README.md) / RadixDateRangePickerIcons
 
@@ -16,7 +16,7 @@ Defined in: [radix/date-range-picker.tsx:11](https://github.com/peppyhop/date-ra
 
 Defined in: [radix/date-range-picker.tsx:12](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L12)
 
-***
+---
 
 ### Check?
 
@@ -24,7 +24,7 @@ Defined in: [radix/date-range-picker.tsx:12](https://github.com/peppyhop/date-ra
 
 Defined in: [radix/date-range-picker.tsx:13](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L13)
 
-***
+---
 
 ### ChevronLeft?
 
@@ -32,7 +32,7 @@ Defined in: [radix/date-range-picker.tsx:13](https://github.com/peppyhop/date-ra
 
 Defined in: [radix/date-range-picker.tsx:14](https://github.com/peppyhop/date-range-picker-cn/blob/ce66e54c96430a01211f588a2b58b8dbb91c0ae6/src/radix/date-range-picker.tsx#L14)
 
-***
+---
 
 ### ChevronRight?
 
