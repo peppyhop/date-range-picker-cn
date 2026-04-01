@@ -1,12 +1,12 @@
-[**date-range-picker-shadcn**](../../README.md)
+[**date-range-picker-cn**](../../README.md)
 
 ***
 
-[date-range-picker-shadcn](../../README.md) / [index](../README.md) / RadixDateInputProps
+[date-range-picker-cn](../../README.md) / [index](../README.md) / RadixDateInputProps
 
 # Interface: RadixDateInputProps
 
-Defined in: radix/date-input.tsx:9
+Defined in: [radix/date-input.tsx:34](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/radix/date-input.tsx#L34)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: radix/date-input.tsx:9
 
 > `optional` **className?**: `string`
 
-Defined in: radix/date-input.tsx:14
+Defined in: [radix/date-input.tsx:39](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/radix/date-input.tsx#L39)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: radix/date-input.tsx:14
 
 > **dateRange**: [`RadixDateRange`](RadixDateRange.md)
 
-Defined in: radix/date-input.tsx:10
+Defined in: [radix/date-input.tsx:35](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/radix/date-input.tsx#L35)
 
 ***
 
@@ -30,7 +30,15 @@ Defined in: radix/date-input.tsx:10
 
 > `optional` **disabled?**: `boolean`
 
-Defined in: radix/date-input.tsx:13
+Defined in: [radix/date-input.tsx:38](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/radix/date-input.tsx#L38)
+
+***
+
+### icons?
+
+> `optional` **icons?**: [`RadixDateInputIcons`](RadixDateInputIcons.md)
+
+Defined in: [radix/date-input.tsx:41](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/radix/date-input.tsx#L41)
 
 ***
 
@@ -38,7 +46,7 @@ Defined in: radix/date-input.tsx:13
 
 > `optional` **locale?**: `string`
 
-Defined in: radix/date-input.tsx:15
+Defined in: [radix/date-input.tsx:40](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/radix/date-input.tsx#L40)
 
 ***
 
@@ -46,7 +54,7 @@ Defined in: radix/date-input.tsx:15
 
 > `optional` **placeholder?**: `string`
 
-Defined in: radix/date-input.tsx:12
+Defined in: [radix/date-input.tsx:37](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/radix/date-input.tsx#L37)
 
 ***
 
@@ -54,4 +62,4 @@ Defined in: radix/date-input.tsx:12
 
 > **setDateRange**: `Dispatch`\<`SetStateAction`\<[`RadixDateRange`](RadixDateRange.md)\>\>
 
-Defined in: radix/date-input.tsx:11
+Defined in: [radix/date-input.tsx:36](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/radix/date-input.tsx#L36)

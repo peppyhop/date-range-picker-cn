@@ -1,8 +1,8 @@
-**date-range-picker-shadcn**
+**date-range-picker-cn**
 
 ***
 
-# date-range-picker-shadcn
+# date-range-picker-cn
 
 ## Modules
 

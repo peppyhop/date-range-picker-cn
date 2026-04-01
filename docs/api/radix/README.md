@@ -1,8 +1,8 @@
-[**date-range-picker-shadcn**](../README.md)
+[**date-range-picker-cn**](../README.md)
 
 ***
 
-[date-range-picker-shadcn](../README.md) / radix
+[date-range-picker-cn](../README.md) / radix
 
 # radix
 

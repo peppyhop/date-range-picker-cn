@@ -1,20 +1,20 @@
-[**date-range-picker-shadcn**](../../README.md)
+[**date-range-picker-cn**](../../README.md)
 
 ***
 
-[date-range-picker-shadcn](../../README.md) / [index](../README.md) / BaseDateRangePickerProps
+[date-range-picker-cn](../../README.md) / [index](../README.md) / BaseDateRangePickerProps
 
 # Interface: BaseDateRangePickerProps
 
-Defined in: base/date-range-picker.tsx:23
+Defined in: [base/date-range-picker.tsx:97](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L97)
 
 ## Properties
 
 ### align?
 
-> `optional` **align?**: `"end"` \| `"start"` \| `"center"`
+> `optional` **align?**: `"start"` \| `"center"` \| `"end"`
 
-Defined in: base/date-range-picker.tsx:32
+Defined in: [base/date-range-picker.tsx:106](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L106)
 
 ***
 
@@ -22,7 +22,15 @@ Defined in: base/date-range-picker.tsx:32
 
 > `optional` **disabled?**: `boolean`
 
-Defined in: base/date-range-picker.tsx:36
+Defined in: [base/date-range-picker.tsx:110](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L110)
+
+***
+
+### icons?
+
+> `optional` **icons?**: [`BaseDateRangePickerIcons`](BaseDateRangePickerIcons.md)
+
+Defined in: [base/date-range-picker.tsx:111](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L111)
 
 ***
 
@@ -30,7 +38,7 @@ Defined in: base/date-range-picker.tsx:36
 
 > `optional` **initialCompareFrom?**: `string` \| `Date`
 
-Defined in: base/date-range-picker.tsx:30
+Defined in: [base/date-range-picker.tsx:104](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L104)
 
 ***
 
@@ -38,7 +46,7 @@ Defined in: base/date-range-picker.tsx:30
 
 > `optional` **initialCompareTo?**: `string` \| `Date`
 
-Defined in: base/date-range-picker.tsx:31
+Defined in: [base/date-range-picker.tsx:105](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L105)
 
 ***
 
@@ -46,7 +54,7 @@ Defined in: base/date-range-picker.tsx:31
 
 > `optional` **initialDateFrom?**: `string` \| `Date`
 
-Defined in: base/date-range-picker.tsx:28
+Defined in: [base/date-range-picker.tsx:102](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L102)
 
 ***
 
@@ -54,7 +62,7 @@ Defined in: base/date-range-picker.tsx:28
 
 > `optional` **initialDateTo?**: `string` \| `Date`
 
-Defined in: base/date-range-picker.tsx:29
+Defined in: [base/date-range-picker.tsx:103](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L103)
 
 ***
 
@@ -62,7 +70,7 @@ Defined in: base/date-range-picker.tsx:29
 
 > `optional` **locale?**: `string`
 
-Defined in: base/date-range-picker.tsx:33
+Defined in: [base/date-range-picker.tsx:107](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L107)
 
 ***
 
@@ -70,7 +78,7 @@ Defined in: base/date-range-picker.tsx:33
 
 > `optional` **onUpdate?**: (`values`) => `void`
 
-Defined in: base/date-range-picker.tsx:24
+Defined in: [base/date-range-picker.tsx:98](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L98)
 
 #### Parameters
 
@@ -94,7 +102,7 @@ Defined in: base/date-range-picker.tsx:24
 
 > `optional` **placeholder?**: `string`
 
-Defined in: base/date-range-picker.tsx:35
+Defined in: [base/date-range-picker.tsx:109](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L109)
 
 ***
 
@@ -102,4 +110,4 @@ Defined in: base/date-range-picker.tsx:35
 
 > `optional` **showCompare?**: `boolean`
 
-Defined in: base/date-range-picker.tsx:34
+Defined in: [base/date-range-picker.tsx:108](https://github.com/peppyhop/date-range-picker-cn/blob/4b380d7536c088ca6a3989255b757ae9f657d7d2/src/base/date-range-picker.tsx#L108)
