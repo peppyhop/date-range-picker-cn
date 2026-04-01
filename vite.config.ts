@@ -13,7 +13,19 @@ export default defineConfig({
 	build: {
 		outDir: "dist",
 		emptyOutDir: true,
-		chunkSizeWarningLimit: 600,
+		rollupOptions: {
+			output: {
+				manualChunks(id) {
+					if (!id.includes("node_modules")) return;
+					if (id.includes("react-day-picker")) return "day-picker";
+					if (id.includes("lucide-react")) return "icons";
+					if (id.includes("@base-ui") || id.includes("radix-ui")) return "ui";
+					if (id.includes("/react/") || id.includes("/react-dom/"))
+						return "react";
+					return "vendor";
+				},
+			},
+		},
 	},
 	resolve: {
 		alias: {
