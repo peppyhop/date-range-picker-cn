@@ -11,7 +11,7 @@ export default defineConfig({
 	plugins: [react(), tailwindcss()],
 	base: "/date-range-picker-cn/",
 	build: {
-		outDir: "dist",
+		outDir: "dist-site",
 		emptyOutDir: true,
 		rollupOptions: {
 			output: {

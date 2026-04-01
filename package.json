@@ -25,7 +25,9 @@
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc -b && vite build",
+		"build": "npm run build:site",
+		"build:site": "vite build",
+		"build:lib": "vite build -c vite.config.lib.root.ts && vite build -c vite.config.lib.base.ts && vite build -c vite.config.lib.radix.ts && tsc -p tsconfig.build.json",
 		"test": "npm run test:browser",
 		"test:browser": "TZ=UTC vitest --browser --run",
 		"commitlint": "commitlint --verbose",
@@ -36,7 +38,7 @@
 		"format": "oxfmt --write",
 		"format:check": "oxfmt --check",
 		"preview": "vite preview",
-		"build:package": "tsc -b && vite build",
+		"build:package": "npm run build:lib",
 		"prepare": "husky"
 	},
 	"peerDependencies": {
