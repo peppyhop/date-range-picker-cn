@@ -71,6 +71,8 @@ export interface SegmentedDateInputProps {
   onChange: (date: Date | undefined) => void;
   ariaLabel: string;
   Icon?: React.ComponentType<{ className?: string }>;
+  locale?: string;
+  order?: "dmy" | "mdy" | "ymd";
 }
 
 export function SegmentedDateInput({
@@ -78,12 +80,50 @@ export function SegmentedDateInput({
   onChange,
   ariaLabel,
   Icon,
+  locale,
+  order,
 }: SegmentedDateInputProps): React.JSX.Element {
   const [parts, setParts] = React.useState(() => formatDateParts(value));
 
   React.useEffect(() => {
     setParts(formatDateParts(value));
   }, [value]);
+
+  const resolvedOrder: ("day" | "month" | "year")[] = React.useMemo(() => {
+    if (order === "dmy") {
+      return ["day", "month", "year"];
+    }
+    if (order === "mdy") {
+      return ["month", "day", "year"];
+    }
+    if (order === "ymd") {
+      return ["year", "month", "day"];
+    }
+    const example = new Date(2000, 10, 22);
+    const formatter = locale ? new Intl.DateTimeFormat(locale) : new Intl.DateTimeFormat();
+    const formatParts = formatter
+      .formatToParts(example)
+      .map((p) => p.type)
+      .filter((t) => t === "day" || t === "month" || t === "year") as ("day" | "month" | "year")[];
+    const unique: ("day" | "month" | "year")[] = [];
+    for (const p of formatParts) {
+      if (!unique.includes(p)) {
+        unique.push(p);
+      }
+    }
+    if (unique.length === 3) {
+      return unique;
+    }
+    return ["month", "day", "year"];
+  }, [locale, order]);
+
+  const separator = React.useMemo(() => {
+    const example = new Date(2000, 10, 22);
+    const formatter = locale ? new Intl.DateTimeFormat(locale) : new Intl.DateTimeFormat();
+    const formatParts = formatter.formatToParts(example);
+    const lit = formatParts.find((p) => p.type === "literal")?.value;
+    return lit ?? "/";
+  }, [locale]);
 
   const updatePart = (part: keyof DateParts, nextValue: string): void => {
     const sanitizedValue = nextValue.replaceAll(/\D/g, "");
@@ -103,38 +143,37 @@ export function SegmentedDateInput({
 
   return (
     <div className="flex items-center gap-1.5 rounded-xl border border-border/70 bg-background px-2.5 py-1.5">
-      <input
-        type="text"
-        inputMode="numeric"
-        aria-label={`${ariaLabel} month`}
-        value={parts.month}
-        onChange={(event) => updatePart("month", event.target.value)}
-        onBlur={resetParts}
-        onFocus={(event) => event.currentTarget.select()}
-        className="w-5 bg-transparent text-center text-sm font-medium text-foreground outline-none"
-      />
-      <span className="text-muted-foreground">/</span>
-      <input
-        type="text"
-        inputMode="numeric"
-        aria-label={`${ariaLabel} day`}
-        value={parts.day}
-        onChange={(event) => updatePart("day", event.target.value)}
-        onBlur={resetParts}
-        onFocus={(event) => event.currentTarget.select()}
-        className="w-5 bg-transparent text-center text-sm font-medium text-foreground outline-none"
-      />
-      <span className="text-muted-foreground">/</span>
-      <input
-        type="text"
-        inputMode="numeric"
-        aria-label={`${ariaLabel} year`}
-        value={parts.year}
-        onChange={(event) => updatePart("year", event.target.value)}
-        onBlur={resetParts}
-        onFocus={(event) => event.currentTarget.select()}
-        className="w-9 bg-transparent text-center text-sm font-medium text-foreground outline-none"
-      />
+      {resolvedOrder.map((slot, idx) => {
+        const isYear = slot === "year";
+        const valueFor = slot === "day" ? parts.day : slot === "month" ? parts.month : parts.year;
+        const label =
+          slot === "day"
+            ? `${ariaLabel} day`
+            : slot === "month"
+              ? `${ariaLabel} month`
+              : `${ariaLabel} year`;
+        return (
+          <React.Fragment key={slot}>
+            <input
+              type="text"
+              inputMode="numeric"
+              aria-label={label}
+              value={valueFor}
+              onChange={(event) => updatePart(slot, event.target.value)}
+              onBlur={resetParts}
+              onFocus={(event) => event.currentTarget.select()}
+              className={
+                isYear
+                  ? "w-9 bg-transparent text-center text-sm font-medium text-foreground outline-none"
+                  : "w-5 bg-transparent text-center text-sm font-medium text-foreground outline-none"
+              }
+            />
+            {idx < resolvedOrder.length - 1 ? (
+              <span className="text-muted-foreground">{separator}</span>
+            ) : null}
+          </React.Fragment>
+        );
+      })}
       {Icon ? (
         <Icon className="size-3.5 text-muted-foreground" />
       ) : (
