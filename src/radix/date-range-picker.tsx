@@ -109,13 +109,19 @@ export interface DateRangePickerProps {
 }
 
 function toDate(value: Date | string | undefined): Date | undefined {
-  if (!value) {return;}
+  if (!value) {
+    return;
+  }
   if (value instanceof Date) {
-    if (Number.isNaN(value.getTime())) {return;}
+    if (Number.isNaN(value.getTime())) {
+      return;
+    }
     return value;
   }
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) {return;}
+  if (Number.isNaN(parsed.getTime())) {
+    return;
+  }
   return parsed;
 }
 
@@ -132,13 +138,21 @@ function renderTriggerLabel(
   locale: string,
   placeholder: string,
 ): React.JSX.Element {
-  const {from} = dateRange;
-  const {to} = dateRange;
+  const { from } = dateRange;
+  const { to } = dateRange;
 
-  if (!from && !to) {return <>{placeholder}</>;}
-  if (from && !to) {return <>{formatDate(from, locale)}</>;}
-  if (!from && to) {return <>{formatDate(to, locale)}</>;}
-  if (!from || !to) {return <>{placeholder}</>;}
+  if (!from && !to) {
+    return <>{placeholder}</>;
+  }
+  if (from && !to) {
+    return <>{formatDate(from, locale)}</>;
+  }
+  if (!from && to) {
+    return <>{formatDate(to, locale)}</>;
+  }
+  if (!from || !to) {
+    return <>{placeholder}</>;
+  }
 
   return (
     <>
@@ -196,7 +210,9 @@ function startOfDay(date: Date): Date {
 }
 
 function getPreviousPeriod(range: DateRange): CompareDateRange | undefined {
-  if (!range.from || !range.to) {return;}
+  if (!range.from || !range.to) {
+    return;
+  }
   const from = startOfDay(range.from);
   const to = startOfDay(range.to);
   const days = Math.max(1, Math.round((to.getTime() - from.getTime()) / 86_400_000) + 1) - 1;
@@ -209,7 +225,9 @@ function getPreviousPeriod(range: DateRange): CompareDateRange | undefined {
 }
 
 function formatDateInput(date: Date | undefined): string {
-  if (!date) {return "";}
+  if (!date) {
+    return "";
+  }
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const day = String(date.getDate()).padStart(2, "0");
@@ -373,12 +391,15 @@ export function DateRangePicker({
     setIsOpen(false);
   };
 
-  const activePresetLabel = React.useMemo(() => presetDateRanges.find((preset) => {
-      return (
-        formatDateInput(preset.dateRange.from) === formatDateInput(draftDateRange.from) &&
-        formatDateInput(preset.dateRange.to) === formatDateInput(draftDateRange.to)
-      );
-    })?.label, [draftDateRange.from, draftDateRange.to, presetDateRanges]);
+  const activePresetLabel = React.useMemo(
+    () =>
+      presetDateRanges.find(
+        (preset) =>
+          formatDateInput(preset.dateRange.from) === formatDateInput(draftDateRange.from) &&
+          formatDateInput(preset.dateRange.to) === formatDateInput(draftDateRange.to),
+      )?.label,
+    [draftDateRange.from, draftDateRange.to, presetDateRanges],
+  );
 
   const monthsToShow = isMobile ? 1 : 2;
 

@@ -15,8 +15,12 @@ function formatDateParts(date: Date | undefined): DateParts {
 }
 
 function parseDateParts(month: string, day: string, year: string): Date | null | undefined {
-  if (!month.trim() && !day.trim() && !year.trim()) {return;}
-  if (!month.trim() || !day.trim() || !year.trim()) {return null;}
+  if (!month.trim() && !day.trim() && !year.trim()) {
+    return;
+  }
+  if (!month.trim() || !day.trim() || !year.trim()) {
+    return null;
+  }
 
   const parsedMonth = Number(month);
   const parsedDay = Number(day);

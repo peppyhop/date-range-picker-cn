@@ -30,11 +30,13 @@ function renderApp(): {
 }
 
 function findButtonByExactText(text: string): HTMLButtonElement | undefined {
-  return [...document.querySelectorAll('button')].find((button) => button.textContent?.trim() === text) as HTMLButtonElement | undefined;
+  return [...document.querySelectorAll("button")].find(
+    (button) => button.textContent?.trim() === text,
+  ) as HTMLButtonElement | undefined;
 }
 
 function parseJsonFromPreElements(): unknown[] {
-  return [...document.querySelectorAll('pre')].map((pre) => {
+  return [...document.querySelectorAll("pre")].map((pre) => {
     const text = pre.textContent ?? "";
     return JSON.parse(text) as unknown;
   });
@@ -60,7 +62,7 @@ describe("date range picker demo", () => {
     const { unmount } = renderApp();
     await nextTick();
 
-    const trigger = [...document.querySelectorAll('button')].find((button) => {
+    const trigger = [...document.querySelectorAll("button")].find((button) => {
       const text = button.textContent ?? "";
       return text.includes(" - ") && text.includes(",");
     });

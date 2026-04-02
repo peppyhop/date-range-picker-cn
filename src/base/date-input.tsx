@@ -72,9 +72,15 @@ export function DateInput({
   const [isFocused, setIsFocused] = React.useState(false);
 
   const formatDateRange = (range: DateRange): string => {
-    if (!range.from && !range.to) {return placeholder;}
-    if (range.from && !range.to) {return formatDate(range.from, locale);}
-    if (!range.from && range.to) {return formatDate(range.to, locale);}
+    if (!range.from && !range.to) {
+      return placeholder;
+    }
+    if (range.from && !range.to) {
+      return formatDate(range.from, locale);
+    }
+    if (!range.from && range.to) {
+      return formatDate(range.to, locale);
+    }
     if (range.from && range.to) {
       return `${formatDate(range.from, locale)} - ${formatDate(range.to, locale)}`;
     }
@@ -82,7 +88,7 @@ export function DateInput({
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const {value} = e.target;
+    const { value } = e.target;
     setInputValue(value);
 
     const parts = value.split(" - ");
